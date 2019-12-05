@@ -31,4 +31,8 @@ router.get("/", (req, res) => {
   res.render("login.html");
 });
 
+router.post("/login", (req, res) => {
+  res.render("index.html");
+});
+
 module.exports = router;
