@@ -20,6 +20,9 @@ router.get("/register", (req, res) => {
   res.render("register.html");
 });
 
+router.get("/register1", (req, res) => {
+  res.render("register1.html");
+});
 // Logout
 // router.get("/logout", (req, res) => {
 //   req.logout();
@@ -51,4 +54,27 @@ router.get("/logout", (req, res) => {
   res.render("login.html");
 });
 
+router.get("/findTrucks", (req, res) => {
+  res.render("findTrucks.html");
+});
+
+router.get("/payment", (req, res) => {
+  res.render("payment.html");
+});
+
+router.get("/success", (req, res) => {
+  res.render("success.html");
+});
+
+router.get("/truckOwnerIndex", (req, res) => {
+  res.render("truckOwnerIndex.html");
+});
+
+router.get("/managetrucks", (req, res) => {
+  res.render("managetrucks.html");
+});
+
+router.get("/managebookings", (req, res) => {
+  res.render("managebookings.html");
+});
 module.exports = router;
