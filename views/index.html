@@ -22,22 +22,25 @@
     <div class="container-fluid">
       <div class="navbar-header">
       </div>
+     
       <ul class="nav navbar-nav">
         <li><a href="/home"><b>Home</b></a></li>
+        <li><a href="/bookings"><b>Current Bookings</b></a></li>
         <li><a href="/about"><b>About</b></a></li>
         <li><a href="/contact"><b>Contact</b></a></li>
       </ul>
 
-      <ul class="nav navbar-nav na<label>Enter source city</label>
-            <input type="text" class="form-control" placeholder="Source City " name="placefrom" required><br>
-            <label>Enter destination city</label>
-            <input type="text" class="form-control" placeholder="Destination City" name="placeto" required><br>vbar-right">
-        <li><a href="/logout"><span class="glyphicon glyphicon-user"></span><b>Logout</b></a></li>
+      <ul class="nav navbar-nav navbar-right">
+        
+        <li><a href="/logout"><span class="glyphicon glyphicon-user"></span><b> Logout</b></a></li>
+ 
       </ul>
+  
+    
     </div>
   </nav>
 
-  <form method="get">
+  <form method="get" action="/findTrucks">
     <div class="container">
       <div class="row">
         <div class='col-md-3'>
@@ -46,31 +49,31 @@
         <div class='col-md-6' style="border-style: ridge">
           <img src="/images/truck.jpg" , style="align-items: center; margin-left: 20%">
           <br><br>
-          <div class="form-group">
-            <input type="text" class="form-control" placeholder="Source City " name="placefrom" required><br>
+          <div class="form-group" >
+            <label>Enter source city</label>
+            <input type="text" class="form-control" placeholder="Source City " name="placefrom" required /><br>
             <label>Enter destination city</label>
-            <input type="text" class="form-control" placeholder="Destination City" name="placeto" required><br>vbar-right">
+            <input type="text" class="form-control" placeholder="Destination City" name="placeto" required /><br>
             <label>Date of transport</label>
-            <input id="datepicker" width="545" placeholder="MM/DD/YYYY" />
+            <input id="datepicker" width="545" placeholder="MM/DD/YYYY" required/>
             <script>
               $('#datepicker').datepicker({
                 uiLibrary: 'bootstrap'
               });
             </script>
             <br><label>Select Truck Size</label><br>
-            <select required name="select truck model" class="form-control">
+            <select class="form-control" required>
               <option>Truck Size</option>
               <option>Compact</option>
               <option>Medium</option>
               <option>Large</option>
             </select>
           </div>
-          <input type="button" class="btn btn-primary" name="Find Trucks" value="Find Trucks" href='/findTrucks'
-            style="align-items: center; margin-left: 40%"><br><br>
+          <button type="submit" class="btn btn-primary">Find Trucks</button><br/><br>
+          <!-- <a href='/findTrucks' class="btn btn-primary" style="align-items: center; margin-left: 40%">Find Trucks</a> -->
         </div>
       </div>
     </div>
   </form>
 </body>
-
 </html>

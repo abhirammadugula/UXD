@@ -33,7 +33,7 @@ dotenv.config({ path: '.env' })
 
 
 // initialize data ............................................
-require('./Config/dbConnection.js')  // load seed data
+// require('./Config/dbConnection.js')  // load seed data
 
 // app variables
 // LOG.debug('env port value is: ',process.env.PORT)
@@ -96,9 +96,9 @@ app.use('/', routes)  // load routing
 // LOG.info('Loaded routing.')
 
 
-app.use((req, res) => { 
-  res.status(404).render('404.ejs') 
-}) // handle page not found errors
+// app.use((req, res) => { 
+//   res.status(404).render('404.ejs') 
+// }) // handle page not found errors
 
 
 // start Express app

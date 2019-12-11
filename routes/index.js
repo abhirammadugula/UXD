@@ -20,6 +20,7 @@ router.get("/register", (req, res) => {
   res.render("register.html");
 });
 
+
 router.get("/register1", (req, res) => {
   res.render("register1.html");
 });
@@ -54,8 +55,17 @@ router.get("/logout", (req, res) => {
   res.render("login.html");
 });
 
+router.get("/bookings", (req, res) => {
+  res.render("bookings.html");
+});
+
+
 router.get("/findTrucks", (req, res) => {
   res.render("findTrucks.html");
+});
+
+router.get("/track", (req, res) => {
+  res.render("track.html");
 });
 
 router.get("/payment", (req, res) => {
