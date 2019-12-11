@@ -20,18 +20,6 @@
       <input type="text" name="username" placeholder="Username" required="required" />
       <input type="password" name="password" placeholder="Password" required="required" />
       <button type="submit" id="login" class="btn btn-primary">LOGIN</button><br/><br>
-      <script>
-        document.getElementById("login").onclick = function(){
-        alert('hello');
-        console.log('username is', req.body.Username)
-        console.log('password is', req.body.Password)
-        if(req.body.Username=="admin" && req.body.Password=="admin"){
-            alert('success')
-        }else{
-            alert('failed')
-        }
-      };  
-      </script>
       <p>Don't have an account? </p>
       <a href='/register'> Register as user</a> <br>
       <a href='/register1'> Register as truck owner</a>

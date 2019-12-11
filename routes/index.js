@@ -10,7 +10,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 // const LOG = require("../utils/logger.js");
-// const userController = require("../Controllers/User");
+const userController = require("../controllers/user");
 const session = require("express-session");
 
 //LOG.debug('START routing')
@@ -19,7 +19,6 @@ const router = express.Router();
 router.get("/register", (req, res) => {
   res.render("register.html");
 });
-
 
 router.get("/register1", (req, res) => {
   res.render("register1.html");
@@ -47,9 +46,11 @@ router.get("/contact", (req, res) => {
   res.render("contact.html");
 });
 
-router.post("/login", (req, res) => {
-  res.render("index.html");
-});
+// router.post("/login", (req, res) => {
+//   res.render("index.html");
+// });
+
+router.post("/login", userController.login);
 
 router.get("/logout", (req, res) => {
   res.render("login.html");
@@ -58,7 +59,6 @@ router.get("/logout", (req, res) => {
 router.get("/bookings", (req, res) => {
   res.render("bookings.html");
 });
-
 
 router.get("/findTrucks", (req, res) => {
   res.render("findTrucks.html");
@@ -87,4 +87,9 @@ router.get("/managetrucks", (req, res) => {
 router.get("/managebookings", (req, res) => {
   res.render("managebookings.html");
 });
+
+router.get("/adminIndex", (req, res) => {
+  res.render("adminIndex.html");
+});
+
 module.exports = router;
