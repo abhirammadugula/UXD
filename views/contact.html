@@ -61,7 +61,7 @@ input[type=submit]:hover {
           </ul>
         </div>
       </nav>
-<h3>Contact Form</h3>
+<h3 align="center">Contact Form</h3>
 
 
 <div class="container">
@@ -77,14 +77,39 @@ input[type=submit]:hover {
       <option value="Missouri">Missouri</option>
       <option value="Nebraska">Nebraska</option>
       <option value="Washington">Washington</option>
+      <option value="Alabama">Alabama</option>
+      <option value="Alaska">Alaska</option>
+      <option value="Illinois">Illinois</option>
+     
+
     </select>
 
     <label for="subject">Subject</label>
     <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+    
+  
+    <button onclick="myFunction()"class="button">Submit</button>
+    <style>
+      .button {
+        background-color: #4CAF50;
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+      }
+      </style>
+   
+<script>
+function myFunction() {
+  alert("Contact information is stored Successfully !");
+}
+</script>
 
-    <input type="submit" value="Submit">
-  </form>
-</div>
 
 </body>
 </html>
